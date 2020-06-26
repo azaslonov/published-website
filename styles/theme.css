@@ -23,7 +23,7 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -1408,7 +1408,6 @@ spinner {
 
 .table {
   width: 100%;
-  max-width: 100%;
   margin-bottom: 10px;
   background-color: none; }
   .table td,
@@ -1433,7 +1432,8 @@ spinner {
     border-top: 1px solid #dee2e6; }
     .table .table-row > div {
       padding: .75rem;
-      vertical-align: top; }
+      vertical-align: top;
+      min-width: 150px; }
   .table .table-head {
     display: flex;
     flex-direction: row;
@@ -1670,7 +1670,8 @@ text.subunit-label {
 
 .input-group {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  max-width: 100%; }
   .input-group .input {
     border: none;
     background: none;
@@ -2129,7 +2130,8 @@ p:empty:before {
   margin-right: auto; }
 
 .d-block {
-  display: block; }
+  display: block;
+  max-width: 100%; }
 
 .mt-auto {
   margin-top: auto; }
@@ -2154,6 +2156,15 @@ p:empty:before {
 .text-monospace {
   font-family: monospace; }
 
+.scrollable-x {
+  max-width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth; }
+
+.scrollable-y {
+  overflow-y: auto;
+  scroll-behavior: smooth; }
+
 .nav-pills {
   margin: 5px 0; }
   .nav-pills .nav-item {
@@ -2167,4 +2178,35 @@ p:empty:before {
         background-color: #efefef; }
       .nav-pills .nav-item .nav-link.active {
         border-color: #ccc; }
+
+/* Breakpoints */
+/* Defaults */
+.resize-handle {
+  background: transparent;
+  position: absolute;
+  z-index: 8801; }
+  .resize-handle.resize-handle-right {
+    cursor: e-resize;
+    width: 5px;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  .resize-handle.resize-handle-left {
+    cursor: w-resize;
+    width: 5px;
+    left: 0;
+    top: 0;
+    bottom: 0; }
+  .resize-handle.resize-handle-top {
+    cursor: n-resize;
+    height: 5px;
+    left: 0;
+    right: 0;
+    top: 0; }
+  .resize-handle.resize-handle-bottom {
+    cursor: s-resize;
+    height: 5px;
+    left: 0;
+    right: 0;
+    bottom: 0; }
 
