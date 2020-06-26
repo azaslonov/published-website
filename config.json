@@ -1,0 +1,7 @@
+{
+  "managementApiUrl": "https://alzaslondemo.management.azure-api.net",
+  "managementApiVersion": "2018-06-01-preview",
+  "environment": "runtime",
+  "devPortalUrl": "https://alzaslondemo.developer.azure-api.net",
+  "proxyHostnames": "alzaslondemo.azure-api.net"
+}
